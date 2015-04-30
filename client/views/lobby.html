@@ -1,0 +1,35 @@
+<template name="lobby">
+    <div class="row center">
+        <div class="col s6 offset-s3">
+            <h5>Join chatroom</h5>
+
+            <div class="collection">
+                {{#each rooms}}
+                    <a href="/room/{{_id}}" class="collection-item">{{name}}</a>
+                {{else}}
+                    <a href="#" class="collection-item active">No rooms yet</a>
+                {{/each}}
+            </div>
+
+            <h5>Or create a new one:</h5>
+
+            {{> addRoomForm}}
+        </div>
+    </div>
+</template>
+
+<template name="addRoomForm">
+    <div class="row">
+        <form class="col s12">
+            <div class="row">
+                <div class="input-field col s9">
+                    <input id="roomName" type="text" class="validate">
+                    <label for="roomName">Room name</label>
+                </div>
+                <div class="input-field col s3">
+                    <button class="btn waves-effect waves-light" type="submit">Create</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</template>

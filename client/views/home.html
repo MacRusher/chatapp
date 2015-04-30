@@ -1,0 +1,15 @@
+<template name="home">
+    <h1 class="header center red-text">Some basic example app</h1>
+
+    <div class="row center">
+        <h5 class="header col s12 light">Using a modern responsive front-end framework based on Material Design</h5>
+    </div>
+    <div class="row center">
+        {{#if currentUser}}
+            <a href="/lobby" class="btn-large waves-effect waves-light red">Start chatting!</a>
+        {{else}}
+            <span class="btn-large waves-effect waves-light red js-login">Log in to chat!</span>
+        {{/if}}
+
+    </div>
+</template>
